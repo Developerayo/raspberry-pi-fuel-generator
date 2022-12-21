@@ -12,6 +12,12 @@ void turnOnGenerator() {
 void turnOffGenerator() {
   digitalWrite(RELAY_GPIO_PIN, LOW);
 }
+
+void setup() {
+  
+  Serial.begin(115200);
+  receiver.enableReceive(RECEIVER_GPIO_PIN);
+}
     receiver.resetAvailable();
   }
 }
